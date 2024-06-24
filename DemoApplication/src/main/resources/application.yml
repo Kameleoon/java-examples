@@ -1,0 +1,34 @@
+kameleoon:
+  clientId: clientId
+  clientSecret: clientSecret
+  siteCode: siteCode
+  topLevelDomain: localhost
+
+server:
+  error:
+    include-message: always
+  port: 4300
+
+spring:
+  codec:
+    max-in-memory-size: 20MB
+  jackson:
+    mapper:
+      default-view-inclusion: true
+    serialization:
+      write-dates-as-timestamps: true
+    deserialization:
+      fail-on-unknown-properties: false
+  main:
+    banner-mode: 'off'
+    log-startup-info: true
+  profiles:
+    active: prod
+
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: true
+      
+#logging:
+#  config: classpath:log4j2.yml
